@@ -2,8 +2,10 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__, template_folder="templates")
 
-todos = [{"todo": "Sample Todo", "done": False}]
+# Dummy data for todos
+todos = [{"task": "Sample Todo", "done": False}]
 
+# Routes
 @app.route("/")
 def index():
     return render_template("index.html", todos=todos)
